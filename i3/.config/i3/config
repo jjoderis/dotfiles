@@ -11,7 +11,7 @@
 
 set $mod Mod4
 
-exec --no-startup-id picom
+exec_always --no-startup-id picom --experimental-backends
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id /home/janis/dotfiles/polybar/.config/polybar/launch_polybar.sh
 exec_always --no-startup-id /home/janis/.config/i3/system-specifics.sh
@@ -19,7 +19,7 @@ exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 # exec_always feh --bg-scale ~/Pictures/nice-blue-background.png
 bindsym $mod+space exec rofi -show drun
 
-exec --no-startup-id setxkbmap -option caps:escape
+exec_always --no-startup-id setxkbmap -option caps:escape
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -193,8 +193,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-gaps inner 8
-smart_gaps on
+gaps inner 6
+gaps top -4
+gaps bottom -6
+gaps horizontal -6
+# smart_gaps on
 
 default_border pixel 3
 
@@ -226,7 +229,7 @@ set $mantle    #181825
 set $crust     #11111b
 
 # target                 title     bg    text      indicator    border
-client.focused           $mantle   $mauve $mantle  $rosewater $mauve
+client.focused           $mantle   $teal $mantle  $rosewater $teal
 client.focused_inactive  $overlay0 $base  $text    $rosewater $overlay0
 client.unfocused         $overlay0 $base  $text    $rosewater $overlay0
 client.urgent            $peach    $base  $peach   $overlay0  $peach
