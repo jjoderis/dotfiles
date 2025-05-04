@@ -41,3 +41,10 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { silent = true })
 
 vim.keymap.set({ "n", "v" }, "<leader>cy", [["+y]], { silent = true })
 vim.keymap.set({ "n", "v" }, "<leader>cp", [["+p]], { silent = true })
+
+vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
+vim.keymap.set("n", "<space>x", ":.lua<CR>")
+vim.keymap.set("v", "<space>x", ":lua<CR>")
+
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
