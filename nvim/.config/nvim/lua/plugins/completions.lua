@@ -85,6 +85,9 @@ return {
 						behavior = cmp.ConfirmBehavior.Insert,
 						select = true,
 					}),
+					["<Tab>"] = cmp.mapping(function(fallback)
+						fallback()
+					end),
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },

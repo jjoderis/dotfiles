@@ -9,6 +9,6 @@ local rep = require("luasnip.extras").rep
 
 return {
 	s("ifn", fmt("#ifndef {}\n#define {}\n\n{}\n\n#endif", { i(1), rep(1), i(2) })),
-	s("print", fmt('std::cout << {} << "\\n";', { i(1) })),
+	s("print", fmt('printf("{}"{});', { i(1), i(2) })),
 	s("inc", fmt("#include {}", { c(1, { fmt('"{}"', { i(1) }), fmt("<{}>", { i(1) }) }) })),
 }

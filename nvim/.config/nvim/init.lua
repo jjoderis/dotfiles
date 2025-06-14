@@ -15,6 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
+require("floaterminal")
 require("lazy").setup("plugins")
 
 vim.wo.relativenumber = true
