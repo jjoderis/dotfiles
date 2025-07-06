@@ -1,0 +1,128 @@
+@import "mocha.css";
+
+* {
+  font-family: Hack Nerd Font;
+  font-size: 16px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
+  color: @text;
+  margin: 5px 5px;
+}
+
+#workspaces,
+#tray,
+#clock,
+#system,
+#privacy,
+#custom-weather,
+#custom-zypper,
+#mpris {
+  background-color: @surface0;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
+  color: @teal;
+}
+
+#workspaces {
+  padding: 0 1rem;
+  margin: 5px 1rem;
+}
+
+#workspaces button {
+  color: @text;
+  border: 2px solid transparent;
+  border-radius: 0;
+  padding: 0.4rem;
+}
+
+#workspaces button:hover {
+  color: @teal;
+  border-bottom: 2px solid @sapphire;
+}
+#workspaces button.visible {
+  color: @blue;
+  border-bottom: 2px solid @blue;
+}
+#workspaces button.active {
+  color: @green;
+  border-bottom: 2px solid @green;
+}
+#workspaces button.urgent {
+  color: @red;
+  border-bottom: 2px solid @red;
+}
+
+#clock {
+  margin-right: 1rem;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#tray {
+  margin-right: 1rem;
+}
+
+#pulseaudio,
+#language,
+#cpu,
+#memory,
+#bluetooth,
+#network,
+#battery {
+  padding: 0 1rem;
+  border-right: 2px solid @surface2;
+  color: @teal;
+}
+
+#group-power {
+  padding-left: 0.2rem;
+}
+#network {
+  padding-left: 1.2rem;
+}
+#language {
+  padding-left: 0.4rem;
+}
+
+#system,
+#privacy,
+#custom-weather,
+#custom-zypper,
+#mpris {
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+
+#custom-shutdown {
+  color: @red;
+}
+#custom-quit {
+  color: @peach;
+}
+#custom-reboot {
+  color: @green;
+}
+#custom-lock {
+  color: @yellow;
+}
+#custom-suspend {
+  color: @sapphire;
+}
